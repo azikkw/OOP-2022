@@ -1,0 +1,12 @@
+package Problem4;
+
+//import practice2.Student;
+
+public class GradeBook 
+{
+	Course c = new Course(null, null);
+	
+	public String displayMessage() {
+		return "Welcome to the grade book for " + " " + c.description + " " + c.name + "!";
+	}
+}

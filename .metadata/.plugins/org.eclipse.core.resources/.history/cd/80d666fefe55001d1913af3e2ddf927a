@@ -1,0 +1,23 @@
+package Problem3;
+
+public class Queen extends Piece
+{
+	Position a;
+	
+	public Queen(Position a) {
+		this.a = a;
+	}
+	
+	public boolean isLegalMove(Position b) {
+		if(a.equals(b)) return false;
+		else if(b.equals(null)) return false;
+		else {
+			if(b.getX() == a.getX() || b.getY() == a.getY()) {
+				if(b.getX() == 0 || b.getY() > 8) return false;
+				else return true;
+			}
+			else if(Math.abs(b.getX() - a.getX()) == 1 && b.getY() - a.getY() == 1) return true;
+			else return false;
+		}
+	}
+}

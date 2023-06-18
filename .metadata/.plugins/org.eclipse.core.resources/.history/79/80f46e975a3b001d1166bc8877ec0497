@@ -1,0 +1,10 @@
+package Problem4;
+
+//import practice2.Student;
+
+public class GradeBook 
+{
+	public String displayMessage(Course c) {
+		return "Welcome to the grade book for " + " " + c.description + " " + c.name + "!";
+	}
+}

@@ -1,0 +1,11 @@
+package Problem4;
+
+public class TestGradeBook 
+{
+	public static void main(String args[])
+	{
+		GradeBook g = new GradeBook();
+		
+		System.out.println(g.displayMessage());
+	}
+}

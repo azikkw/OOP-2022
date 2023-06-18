@@ -1,0 +1,40 @@
+package Problem3;
+
+public class Bishop extends Piece
+{
+	Position a;
+	
+	public Bishop(Position a) {
+		this.a = a;
+	}
+	
+	public boolean isLegalMove(Position b) {
+		if(a.equals(b)) return false;
+		else if(b.equals(null)) return false;
+		else if(b.getX() == a.getX() || b.getY() == a.getY()) return false;
+		else {
+			System.out.println(+(b.getX() - a.getX()));
+			System.out.println(+(b.getY() - a.getY()));
+			if(b.getY() == 0 || b.getX() > 8) return false;
+			System.out.println("oop");
+			if(b.getX() - a.getX() < 0 & b.getX() - a.getX() > 0) {
+				System.out.println("oop");
+				System.out.println(-(b.getX() - a.getX()));
+				System.out.println(+(b.getY() - a.getY()));
+				if(-(b.getX() - a.getX()) == b.getY() - a.getY()) {
+					System.out.println("oop");
+					return true;
+				}
+				else return false;
+			}
+			else if(b.getX() - a.getX() > 0 & b.getX() - a.getX() < 0) {
+				System.out.println("oop");
+				System.out.println(+(b.getX() - a.getX()));
+				System.out.println(+(b.getY() - a.getY()));
+				if(b.getX() - a.getX() == -(b.getY() - a.getY())) return true;
+				else return false;
+			}
+			else return false;
+		}
+	}
+}

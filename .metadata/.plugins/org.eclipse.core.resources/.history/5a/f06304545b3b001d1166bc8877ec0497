@@ -1,0 +1,13 @@
+package Problem4;
+
+public class TestGradeBook 
+{
+	public static void main(String args[])
+	{
+		Course c = new Course("CS101", "Object-oriented Programming and Design");
+		
+		GradeBook g = new GradeBook();
+		
+		System.out.println(g.displayMessage(c));
+	}
+}

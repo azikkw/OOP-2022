@@ -1,0 +1,16 @@
+package Problem3;
+
+public class Queen extends Piece
+{
+	Position a;
+	
+	public Queen(Position a) {
+		this.a = a;
+	}
+	
+	public boolean isLegalMove(Position b) {
+		if(a.equals(b)) return false;
+		else if(b.equals(null)) return false;
+		else return true;
+	}
+}

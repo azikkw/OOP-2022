@@ -1,0 +1,31 @@
+package Problem3;
+
+public class Bishop extends Piece
+{
+	Position a;
+	
+	public Bishop(Position a) {
+		this.a = a;
+	}
+	
+	public boolean isLegalMove(Position b) {
+		if(a.equals(b)) return false;
+		else if(b.equals(null)) return false;
+		else if(b.getX() == a.getX() || b.getY() == a.getY()) return false;
+		else {
+			if(b.getY() == 0 || b.getX() > 8) return false;
+			if(b.getX() - a.getX() < 0 & b.getY() - a.getY() > 0) {
+				if(-(b.getX() - a.getX()) == b.getY() - a.getY()) return true;
+				else return false;
+			}
+			else if(b.getX() - a.getX() > 0 & b.getY() - a.getY() < 0) {
+				if(b.getX() - a.getX() == -(b.getY() - a.getY())) return true;
+				else return false;
+			}
+			else {
+				if(b.getX() - a.getX() == b.getY() - a.getY()) return true;
+				else return false;
+			}
+		}
+	}
+}

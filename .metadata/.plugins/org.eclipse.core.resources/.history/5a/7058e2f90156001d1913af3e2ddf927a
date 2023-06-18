@@ -1,0 +1,28 @@
+package Problem3;
+
+public class Tester 
+{
+	public static void main(String[] args) 
+	{
+		Position a = new Position('e', 4);
+		Position b = new Position('e', 3);
+		
+		Rock r = new Rock(a);
+		//System.out.println(r.isLegalMove(b));
+		
+		King k = new King(a);
+		System.out.println(k.isLegalMove(b));
+		
+		Knight kn = new Knight(a);
+		//System.out.println(kn.isLegalMove(b));
+		
+		Pawn p = new Pawn(a);
+		//System.out.println(p.isLegalMove(b));
+		
+		Bishop bi = new Bishop(a);
+		//System.out.println(bi.isLegalMove(b));
+		
+		Queen q = new Queen(a);
+		//System.out.println(q.isLegalMove(b));
+	}
+}
